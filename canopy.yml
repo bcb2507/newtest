@@ -1,6 +1,6 @@
 title: Site title
 collection:
-  - https://bcb2507.github.io/jsontest/interestingitemsmanifest.json?as=iiif
+  - https://bcb2507.github.io/jsontest/interestingitemsmanifest.json
 metadata:
   - Subject
   - Date
