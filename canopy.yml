@@ -5,7 +5,7 @@ metadata:
   - Subject
   - Date
   - Language
-  - Genre
+  - Series
 search:
   page:
     title: Search
