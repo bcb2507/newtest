@@ -5,7 +5,7 @@ collection:
 manifests:
   - https://bcb2507.github.io/jsontest/annotationtest.json
 metadata:
-  - Subject
+  - Subject Area
   - Date
   - Language
   - Series
@@ -23,7 +23,7 @@ search:
   index:
     metadata:
       enabled: true
-      all: false
+      all: true
     summary:
       enabled: true
     annotations:
