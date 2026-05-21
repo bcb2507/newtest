@@ -9,78 +9,20 @@ referencedManifests:
 canonical: https://canopy-iiif.github.io/app/about/index.html
 ---
 
-import {CanopyDiagram} from "@canopy-iiif/app/ui/server";
+ 
 
-# About
+## Project History
+[Sylvester Manor](https://www.sylvestermanor.org) is a historic property and operational farm on Shelter Island, located at the eastern end of Long Island, New York. On the ancestral lands of the Indigenous Manhansett People, Sylvester Manor was established in 1651 by Nathaniel and Constant Sylvester, Anglo-Dutch sugar merchants and enslavers who designed the manor to be a provisioning plantation for their family’s sugar plantations in Barbados. The original 1651 house was demolished by Brinley Sylvester and replaced by the current 1737 Manor House, constructed by enslaved laborers. Recognized as the most intact slaveholding plantation north of Virginia, Sylvester Manor was farmed and worked by enslaved Africans and African Americans until 1820. Later, indentured Native American and European servants served generations of the Sylvester family. Sylvester descendent Eben Fiske Otsby created the Sylvester Manor Educational Farm in 2010 as a 501(c)3 non-profit organization that seeks to continually cultivate livestock and organic produce on 60 acres of farmland; preserve the entire 236 acre property including its historic gardens, burial grounds, and buildings; and educate the public about the site’s history. 
 
-Using [IIIF collections and manifests](https://iiif.io/api/presentation/3.0/#21-defined-types) as a data source, Canopy IIIF (Canopy) generates a scholarly digital projects platform that transforms provided digital collections into an accessible, discoverable research environment. Built on modern web standards and leveraging the interoperability of IIIF, Canopy creates static sites that extend existing IIIF resources while providing advanced localized search capabilities, contextual navigation, and customizable presentation layers.
+In 2022, History & Heritage staff at Sylvester Manor began discussions with the NYU History Department about possible ways to work together, and in 2023 they included NYU in a higher education collaboration project funded by the Mellon Foundation. In 2008, Sylvester family descendants donated a large collection of materials documenting several generations of ownership and stewardship of Sylvester Manor to the Fales Library and Special Collections at New York University Libraries. This project enables students in graduate courses, along with graduate student assistants employed by project funds, to dig deeply into the contents of the Sylvester Manor archive, implement strategies to make them more accessible to scholars, and work with site interpretive staff and department faculty to create public-facing materials for use by Sylvester Manor. The department will also develop a graduate course focused on these archival materials. 
 
-<ButtonWrapper variant="interstitial" text="Have an idea for a project?">
-  <Button href="/about/get-started" label="Get started" />
-  <Button
-    href="https://canopy-iiif.github.io/app/docs/"
-    label="Read documentation"
-    variant="secondary"
-  />
-</ButtonWrapper>
+We created this website using [Canopy IIIF](https://canopy-iiif.github.io/app/), an open-source static site generator, to ensure digital sustainability after the project's period of grant funding ends.  
 
-## Overview
+## Site Credits
+NYU History Department students: Katelyn Landry Carranza, Brenna Moran, Edwyn Feng, Ben Bienstock, Fabian Paredes, Irene Madrigal
 
-Picture a scenario where we have three providers with digitized items relating to a famous individual:
+NYU History Department faculty: Ellen Noonan, Rebecca Goetz
 
-- _30 manifests_ of manuscripts from **Collection A**;
-- _15 manifests_ of portraits from **Collection B**;
-- and _5 manifests_ of scrapbooks sourced **directly** and not part of structured collection.
+Special Thanks: Marii Nyrop, Weatherly Stephan, Nicholas Martin, Donnamarie Barnes, Alice Clark, Calista LaMotte, Ashley Harrington, Mat Jordan
 
-A team is tasked with building out a unified digital project for these items that allows users to browse their content, as well as interact with contextual essays, timelines, and maps. By using Canopy, implementers can quickly stand-up a working project with every manifest becoming its own work page, authored Markdown files providing context, and both streams feeding a shared search index before everything is written out to static HTML, CSS, and data assets. The diagram below walks through that pipeline so you can see how these raw manifests become a ready-to-host digital project.
 
-<CanopyDiagram />
-
-Comprehensive [documentation](https://canopy-iiif.github.io/app/docs/) is integrated into the application and serves as both a development guide and a demonstration of Canopy's potential for digital scholarship and humanities projects. To highlight what Canopy can do, this paragraph is authored in markdown from [a simple text file](https://github.com/canopy-iiif/template/blob/main/content/about/index.mdx?plain=1) and below is an example of an `<Image>` component rendering a IIIF image resource along with an inline annotation and caption. This same image is provided by Northwestern University Libraries as a [IIIF Manifest](https://api.dc.library.northwestern.edu/api/v2/works/4bdb5a22-6c7f-498d-8e6e-e49ea9bc4778?as=iiif) from their [Digital Collections platform](https://dc.library.northwestern.edu/items/4bdb5a22-6c7f-498d-8e6e-e49ea9bc4778) and [aggregated into this project](https://canopy-iiif.github.io/app/works/the-town-and-pass-of-boondi-in-rajpootana.html) as a static page during the Canopy build process.
-
-<Image
-  src="https://iiif.dc.library.northwestern.edu/iiif/3/138a94b0-175a-4152-98c7-df58661ce7d5"
-  isTiledImage={true}
-  height="500px"
-  alt="Painting of the The town & pass of Boondi, in Rajpootana"
-  caption="The town & pass of Boondi, in Rajpootana - Situated on a southern slope of a hill at the end of a long range, the town of Boondi was the capital of the Rajput principality of that name. The palace of the Raja is a large masonry stone building about half way up the hill, according to Grindlay, with a kind of fortification extending to the top."
-  annotations={[
-        {
-          annotation: {
-            id: "https://iiif.dc.library.northwestern.edu/iiif/3/f7409acd-e3f9-496a-b733-81f46d4ffa4f/annotation/0",
-            type: "Annotation",
-            motivation: ["tagging"],
-            body: [
-              {
-                id: "https://iiif.dc.library.northwestern.edu/iiif/3/f7409acd-e3f9-496a-b733-81f46d4ffa4f/annotation/0/body/0",
-                type: "TextualBody",
-                value: "Five individuals traveling.",
-              },
-            ],
-            target: {
-              type: "SpecificResource",
-              source: {
-                id: "https://iiif.dc.library.northwestern.edu/iiif/3/f7409acd-e3f9-496a-b733-81f46d4ffa4f/canvas/1",
-                type: "Canvas",
-              },
-              selector: {
-                type: "FragmentSelector",
-                value: "xywh=1900,4050,1500,1000",
-              },
-            },
-          },
-          targetIndex: 0,
-        }
-      ]}
-
-/>
-
-As authors create content using Markdown, they can reference the source material directly within the text using the `<ReferencedItems />` component below. This component dynamically generates a list of all IIIF Manifests that have been explicitly referenced within the markdown content of the page.
-
-<ReferencedItems />
-
-## Colophon
-
-Canopy was created by [Mat Jordan](https://github.com/mathewjordan) _(Northwestern University)_ and [Mark Baggett](https://github.com/markpbaggett) _(Texas A&M University)_ as a method to quickly build exhibit style digital humanities projects that extend existing digital collections using IIIF Collections and Manifests. It continues to be an active open-source initiative of [Northwestern University Libraries](https://www.library.northwestern.edu/), where it supports digital scholarship in many forms. This example site is built from the [Donald K. Adams and Lawrence D. Stewart Collection of Prints](https://dc.library.northwestern.edu/collections/94536627-cfdf-413c-852b-0cb16d986da3) and the [Indian Paintings on Mica](https://dc.library.northwestern.edu/collections/7ac5769f-a1d9-4227-a350-bf8bd8b1cddc) collection hosted by Northwestern University Libraries' [Digital Collections](https://dc.library.northwestern.edu/).
-
-Canopy uses the [IIIF Presentation API](https://iiif.io/api/presentation/3.0/) to deliver rich media from providing institutions, [Markdown as MDX](https://mdxjs.com/) for authoring contextual content and layout, [TailwindCSS](https://tailwindcss.com/) for the user interface, and a static [FlexSearch](https://github.com/nextapps-de/flexsearch) index for search. Easy aggregation and retrieval of IIIF resources is made possible by the [IIIF helpers](https://github.com/IIIF-Commons/iiif-helpers) developed by [Stephen Fraser](https://github.com/stephenwf). In addition, [Clover IIIF](https://github.com/samvera-labs/clover-iiif), developed by Northwestern University Libraries with contributions from other institutions, is integral to Canopy and provides the rendering of IIIF resources, annotations, and metadata throughout the interface.
