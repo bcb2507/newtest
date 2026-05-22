@@ -1,6 +1,6 @@
 navigation:
   - href: /search
-    label: Works
+    label: Items
   - href: /blog
     label: Blog
   - href: /about
